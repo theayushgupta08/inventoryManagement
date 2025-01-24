@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Stock Level Check</title>
+</head>
+
+<body>
+    <h1>Stock Levels</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Stock Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product, quantity in stock_levels.items %}
+            <tr>
+                <td>{{ product }}</td>
+                <td>{{ quantity }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>

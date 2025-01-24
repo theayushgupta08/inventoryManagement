@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create Sale Order</title>
+</head>
+
+<body>
+    <h1>Create Sale Order</h1>
+    <form method="post" action="{% url 'create_sale_order' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create Sale Order</button>
+    </form>
+</body>
+
+</html>

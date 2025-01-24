@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Supplier</title>
+</head>
+
+<body>
+    <h1>Add Supplier</h1>
+    <form method="post" action="{% url 'add_supplier' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Supplier</button>
+    </form>
+</body>
+
+</html>

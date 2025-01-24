@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete Sale Order</title>
+</head>
+
+<body>
+    <h1>Complete Sale Order</h1>
+    <form method="post" action="{% url 'complete_sale_order' order_id=order.id %}">
+        {% csrf_token %}
+        <p>Are you sure you want to mark the sale order for {{ order.product.name }} as completed?</p>
+        <button type="submit">Yes, Complete Order</button>
+        <a href="{% url 'list_sale_orders' %}">No, Go Back</a>
+    </form>
+</body>
+
+</html>

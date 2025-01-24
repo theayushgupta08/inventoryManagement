@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cancel Sale Order</title>
+</head>
+
+<body>
+    <h1>Cancel Sale Order</h1>
+    <form method="post" action="{% url 'cancel_sale_order' order_id=order.id %}">
+        {% csrf_token %}
+        <p>Are you sure you want to cancel the sale order for {{ order.product.name }}?</p>
+        <button type="submit">Yes, Cancel Order</button>
+        <a href="{% url 'list_sale_orders' %}">No, Go Back</a>
+    </form>
+</body>
+
+</html>
